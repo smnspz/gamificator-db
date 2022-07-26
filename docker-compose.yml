@@ -1,0 +1,12 @@
+services:
+  database:
+    image: 'mongo'
+    container_name: 'gamificator-db'
+    environment:
+      MONGO_INITDB_DATABASE: gamificator
+      MONGO_INITDB_ROOT_USERNAME: gamificator
+      MONGO_INITDB_ROOT_PASSWORD: 75917af1f1
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '27017:27017'
